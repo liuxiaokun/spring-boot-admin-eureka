@@ -20,13 +20,16 @@ public class AdminServerApplication {
     }
 
 
-    /*@Configuration
+    /**
+     * 如果不加这个，控制台会显示admin-server down机
+     */
+    @Configuration
     public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.authorizeRequests().anyRequest().permitAll()
                     .and().csrf().disable();
         }
-    }*/
+    }
 
 }
