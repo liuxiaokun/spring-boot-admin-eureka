@@ -8,12 +8,33 @@ spring:
     user:
       name: root
       password: 123456
-
+  mail:
+    host: smtp.163.com
+    username: 18521599183@163.com
+    password: cloudoer2019
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          from: ${spring.mail.username}
+          to: liuxk@cloudoer.com
+          enabled: true
 eureka:
   instance:
     prefer-ip-address: true
     ip-address: 192.168.1.197
     instance-id: http://192.168.1.197:${server.port}
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
   client:
     service-url:
       defaultZone: http://192.168.1.197:8761/eureka/
