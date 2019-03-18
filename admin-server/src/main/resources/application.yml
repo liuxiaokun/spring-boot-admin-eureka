@@ -10,10 +10,6 @@ spring:
       password: 123456
 
 eureka:
-#  instance:
-#    metadata-map:
-#      user.name: "root"         #These two are needed so that the server
-#      user.password: "123456" #can access the protected client endpoints
   instance:
     prefer-ip-address: true
     ip-address: 192.168.1.197
