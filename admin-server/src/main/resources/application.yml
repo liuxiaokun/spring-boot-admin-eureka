@@ -11,7 +11,7 @@ spring:
   mail:
     host: smtp.163.com
     username: 18521599183@163.com
-    password: cloudoer2019
+    password: cloudoer2019xxx
     default-encoding: UTF-8
     properties:
       mail:
