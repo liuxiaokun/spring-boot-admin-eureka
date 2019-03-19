@@ -22,6 +22,9 @@ spring:
             required: true
   boot:
     admin:
+      monitor:
+        connect-timeout: 20000ms
+        read-timeout: 30000ms
       notify:
         mail:
           from: ${spring.mail.username}
