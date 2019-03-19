@@ -31,14 +31,14 @@ eureka:
   instance:
     health-check-url-path: /actuator/health
     prefer-ip-address: true
-    ip-address: 192.168.1.197
-    instance-id: http://192.168.1.197:${server.port}
+    ip-address: app12
+    instance-id: http://app12:${server.port}
     metadata-map:
       user.name: ${spring.security.user.name}
       user.password: ${spring.security.user.password}
   client:
     service-url:
-      defaultZone: http://192.168.1.197:8761/eureka/
+      defaultZone: http://app12:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
 
